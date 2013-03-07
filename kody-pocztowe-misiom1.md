@@ -16,3 +16,7 @@ Do pobrania kodów pocztowych wykorzystałem API sejmometru w PHP, całością z
 ## Sposób użycia
 
 Ściągnij API, skonfiguruj klucze API, skonfiguruj PHP a następnie na wybranym serwerze uruchom plik index.php, pobieranie kodów następuje odrazu
+
+## Przykadowe dane
+
+Przykadowe dane w pliku [data.json](https://github.com/misiom1/sejmometr/blob/master/data.json)
