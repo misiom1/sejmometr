@@ -1,31 +1,31 @@
 <?
 function decode_unicode($str) {
 	$rep = array(
-         "\u0105" => "π",
-         "\u0119" => "Í",
-         "\u00F3" => "Û",
-         "\u015B" => "ú",
-         "\u0107" => "Ê",
-         "\u017C" => "ø",
-         "\u017A" => "ü",
-         "\u0144" => "Ò",
-         "\u0142" => "≥",
-         "\u0104" => "•",
-         "\u0118" => " ",
-         "\u00D3" => "”",
-         "\u015A" => "å",
-         "\u0106" => "∆",
-         "\u017B" => "Ø",
-         "\u0179" => "è",
-         "\u0143" => "—",
-         "\u0141" => "£");
+         "\u0105" => "ƒÖ",
+         "\u0119" => "ƒô",
+         "\u00F3" => "√≥",
+         "\u015B" => "≈õ",
+         "\u0107" => "ƒá",
+         "\u017C" => "≈º",
+         "\u017A" => "≈∫",
+         "\u0144" => "≈Ñ",
+         "\u0142" => "≈Ç",
+         "\u0104" => "ƒÑ",
+         "\u0118" => "ƒò",
+         "\u00D3" => "√ì",
+         "\u015A" => "≈ö",
+         "\u0106" => "ƒÜ",
+         "\u017B" => "≈ª",
+         "\u0179" => "≈π",
+         "\u0143" => "≈É",
+         "\u0141" => "≈Å");
 		 $str = str_ireplace('&nbsp;', ' ', $str);
 		 return str_ireplace(array_keys($rep), array_values($rep), $str);
 }
 require_once('ePF_API/ep_API.php');
 DEFINE('Z', 100);
 setlocale(LC_ALL, 'pl_PL', 'pl', 'Polish_Poland.28592');
-$fp = fopen('data.txt', 'w');
+$fp = fopen('data.json', 'w');
 $dataset = new ep_Dataset( 'kody_pocztowe' );
 echo 'Zapis do pliku...\n';
 for($i=0;$i<1000000;$i+=100) {
